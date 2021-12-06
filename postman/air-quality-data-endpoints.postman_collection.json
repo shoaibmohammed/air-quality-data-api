@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "58d69d05-7159-43c6-932d-1887d7607414",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add random",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/random",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"groundLevelOzone\": 0.211,\n        \"twoPointFivePM\": 399.1,\n        \"tenPM\": 100.0,\n        \"carbonMonoxide\": 41.2,\n        \"sulfurDioxide\": 214.0,\n        \"nitrogenDioxide\": 412.0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert with faulty sensors (missing data)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"groundLevelOzone\": 0.211,\n        \"twoPointFivePM\": 399.1,\n        \"tenPM\": 100.0,\n        \"carbonMonoxide\": 41.2,\n        \"sulfurDioxide\": 214.0,\n        \"nitrogenDioxide\": 412.0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert with faulty sensors (null data)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n        \"groundLevelOzone\": 0.211,\n        \"twoPointFivePM\": 399.1,\n        \"tenPM\": null,\n        \"carbonMonoxide\": 41.2,\n        \"sulfurDioxide\": 214.0,\n        \"nitrogenDioxide\": null\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert invalid data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"groundLevelOzone\": 0.811,\n        \"twoPointFivePM\": 399.1,\n        \"tenPM\": 100.0,\n        \"carbonMonoxide\": 41.2,\n        \"sulfurDioxide\": 214.0,\n        \"nitrogenDioxide\": 412.0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/data/v1/airqualitydata/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"v1",
+						"airqualitydata",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
