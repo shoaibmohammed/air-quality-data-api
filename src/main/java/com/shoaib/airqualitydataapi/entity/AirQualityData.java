@@ -1,14 +1,17 @@
 package com.shoaib.airqualitydataapi.entity;
 
+import java.util.Date;
+
 public class AirQualityData {
 
-    public AirQualityData(Double groundLevelOzone, Double twoPointFivePM, Double tenPM, Double carbonMonoxide, Double sulfurDioxide, Double nitrogenDioxide) {
+    public AirQualityData(Double groundLevelOzone, Double twoPointFivePM, Double tenPM, Double carbonMonoxide, Double sulfurDioxide, Double nitrogenDioxide, Date timestamp) {
         this.groundLevelOzone = groundLevelOzone;
         this.twoPointFivePM = twoPointFivePM;
         this.tenPM = tenPM;
         this.carbonMonoxide = carbonMonoxide;
         this.sulfurDioxide = sulfurDioxide;
         this.nitrogenDioxide = nitrogenDioxide;
+        this.timestamp = timestamp;
     }
 
     public long id;
@@ -24,6 +27,8 @@ public class AirQualityData {
     public Double sulfurDioxide;
 
     public Double nitrogenDioxide;
+
+    public Date timestamp;
 
 
     public long getId() {
@@ -80,5 +85,13 @@ public class AirQualityData {
 
     public void setNitrogenDioxide(Double nitrogenDioxide) {
         this.nitrogenDioxide = nitrogenDioxide;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
     }
 }

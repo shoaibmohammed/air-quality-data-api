@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.DecimalFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -39,6 +40,7 @@ public class AirQualityDataService {
     public void save(AirQualityData airQualityData) {
         if (validate(airQualityData) ) {
             airQualityData.setId(generateId());
+            airQualityData.setTimestamp(new Date());
             airQualityDataRepository.save(airQualityData);
         } else {
             throw new InvalidDataException();
@@ -83,7 +85,8 @@ public class AirQualityDataService {
             Double.parseDouble(threeDecimal.format(Math.random() * MAX_TEN_PM_LEVEL)),
             Double.parseDouble(oneDecimal.format(Math.random() * MAX_CARBON_MONOXIDE_LEVEL)),
             Double.parseDouble(oneDecimal.format(Math.random() * MAX_SULFUR_DIOXIDE_OZONE)),
-            Double.parseDouble(oneDecimal.format(Math.random() * MAX_NITROGEN_DIOXIDE_OZONE))
+            Double.parseDouble(oneDecimal.format(Math.random() * MAX_NITROGEN_DIOXIDE_OZONE)),
+            new Date()
         );
 
         randomAirQualityData.setId(generateId());
