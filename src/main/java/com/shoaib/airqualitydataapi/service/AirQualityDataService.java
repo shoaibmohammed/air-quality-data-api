@@ -51,19 +51,19 @@ public class AirQualityDataService {
         if (!(isNull(airQualityData.getGroundLevelOzone()) || (airQualityData.getGroundLevelOzone() > 0 && airQualityData.getGroundLevelOzone() < MAX_GROUND_LEVEL_OZONE_LEVEL))) {
             return false;
         }
-        else if (!(isNull(airQualityData.getTwoPointFivePM()) || (airQualityData.getTwoPointFivePM() > 0 && airQualityData.getGroundLevelOzone() < MAX_TWO_POINT_FIVE_PM_LEVEL))) {
+        else if (!(isNull(airQualityData.getTwoPointFivePM()) || (airQualityData.getTwoPointFivePM() > 0 && airQualityData.getTwoPointFivePM() < MAX_TWO_POINT_FIVE_PM_LEVEL))) {
             return false;
         }
-        else if (!(isNull(airQualityData.getTenPM()) || (airQualityData.getTenPM() > 0 && airQualityData.getGroundLevelOzone() < MAX_TEN_PM_LEVEL))) {
+        else if (!(isNull(airQualityData.getTenPM()) || (airQualityData.getTenPM() > 0 && airQualityData.getTenPM() < MAX_TEN_PM_LEVEL))) {
             return false;
         }
-        else if (!(isNull(airQualityData.getCarbonMonoxide()) || (airQualityData.getCarbonMonoxide() > 0 && airQualityData.getGroundLevelOzone() < MAX_CARBON_MONOXIDE_LEVEL))) {
+        else if (!(isNull(airQualityData.getCarbonMonoxide()) || (airQualityData.getCarbonMonoxide() > 0 && airQualityData.getCarbonMonoxide() < MAX_CARBON_MONOXIDE_LEVEL))) {
             return false;
         }
-        else if (!(isNull(airQualityData.getSulfurDioxide()) || (airQualityData.getSulfurDioxide() > 0 && airQualityData.getGroundLevelOzone() < MAX_SULFUR_DIOXIDE_OZONE))) {
+        else if (!(isNull(airQualityData.getSulfurDioxide()) || (airQualityData.getSulfurDioxide() > 0 && airQualityData.getSulfurDioxide() < MAX_SULFUR_DIOXIDE_OZONE))) {
             return false;
         }
-        else if (!(isNull(airQualityData.getNitrogenDioxide()) || (airQualityData.getNitrogenDioxide() > 0 && airQualityData.getGroundLevelOzone() < MAX_NITROGEN_DIOXIDE_OZONE))) {
+        else if (!(isNull(airQualityData.getNitrogenDioxide()) || (airQualityData.getNitrogenDioxide() > 0 && airQualityData.getNitrogenDioxide() < MAX_NITROGEN_DIOXIDE_OZONE))) {
             return false;
         }
             return true;
